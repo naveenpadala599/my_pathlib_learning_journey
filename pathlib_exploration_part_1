@@ -1,0 +1,11 @@
+from pathlib import Path
+cwd=Path.cwd()
+print(cwd)
+home=Path.home()
+print(home)
+absolute_path=cwd.resolve()
+print(absolute_path)
+relative_path=(absolute_path/"test_downloads").relative_to(absolute_path)
+print(relative_path)
+test_downloads=absolute_path/"test_downloads"
+print("parts:",test_downloads.parts)
