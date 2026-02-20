@@ -1,0 +1,23 @@
+from pathlib import Path
+cwd=Path.cwd()
+home=Path.home()
+print("cwd:", cwd)
+print("home:", home)
+downloads=cwd/"downloads"
+relative_path=downloads.relative_to(cwd)
+absolute_path=relative_path.resolve()
+print("aboslute_path:", absolute_path)
+print("relative_paht:", relative_path)
+print("parts:",absolute_path.parts)
+print("parent:",absolute_path.parent)
+print("parents:",absolute_path.parents)
+print("name:",absolute_path.name)
+print("sufix:",absolute_path.suffix)
+print("stem:",absolute_path.stem)
+print("sufixes:",list(absolute_path.suffixes))
+print("exists?", downloads.exists())
+print("is_file?", downloads.is_file())
+print("is_dir?", downloads.is_dir())
+print("is_absolute?", downloads.is_absolute())
+downloaded_images=downloads/"images"
+downloaded_images.mkdir(parents=True, exist_ok=True)
