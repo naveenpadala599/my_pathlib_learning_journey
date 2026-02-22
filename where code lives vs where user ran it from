@@ -1,0 +1,3 @@
+from pathlib import Path
+Project_root=Path(__file__).resolve().parent #where code lives
+Runtime_root=Path.cwd() #where user ran it from
