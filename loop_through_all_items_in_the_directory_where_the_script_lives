@@ -1,0 +1,4 @@
+from pathlib import Path
+file_path=Path(__file__).resolve().parent
+for item in file_path.iterdir():
+    print("-", item, "|file?",item.is_file())
