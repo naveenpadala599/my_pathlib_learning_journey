@@ -1,0 +1,9 @@
+from pathlib import Path
+def unlinktxt(dry_run=True):
+    p=Path.cwd()
+    if dry_run==True:
+        for file in p.rglob("*.txt"):
+            print(file, "will be removed from the current working directory.")
+    else:
+        for file in p.rglob("*.txt"):
+            file.unlink()
