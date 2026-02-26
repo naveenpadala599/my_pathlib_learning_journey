@@ -7,3 +7,4 @@ def unlinktxt(dry_run=True):
     else:
         for file in p.rglob("*.txt"):
             file.unlink()
+unlinktxt(dry_run=False)
