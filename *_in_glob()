@@ -1,0 +1,4 @@
+from pathlib import Path
+for file in Path.cwd().glob("data*.txt"):
+    if file.is_file():
+        print(file)
