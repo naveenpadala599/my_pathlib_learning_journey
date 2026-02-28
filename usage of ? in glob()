@@ -1,0 +1,4 @@
+from pathlib import Path
+p=Path.cwd()
+for file in p.glob("log?.txt"):
+    print(file)
