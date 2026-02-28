@@ -1,0 +1,10 @@
+from pathlib import Path
+file=input("Enter the file name")
+p=Path(file)
+s=p.suffixes
+l=len(s)
+np=p
+for i in range(l):
+    np=np.with_suffix("")
+print(np)    
+    
