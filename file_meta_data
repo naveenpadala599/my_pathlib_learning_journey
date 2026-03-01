@@ -1,0 +1,6 @@
+from pathlib import Path
+import time
+p=Path(__file__).resolve()
+stat=p.stat()
+print("size:",stat.st_size,"bytes")
+print("last_modified:",time.ctime(stat.st_mtime))
