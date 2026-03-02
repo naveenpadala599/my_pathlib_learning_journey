@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path(__file__).resolve().parent/"old.txt"# old txt contains "hi naveen"
+p=p.rename("new.txt")
+r=p.read_text()
+print(r)
