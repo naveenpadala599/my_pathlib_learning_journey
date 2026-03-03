@@ -1,0 +1,4 @@
+from pathlib import Path
+p=Path("folder")
+tp=Path("shortcut_to_folder")
+tp.symlink_to(p)
