@@ -1,0 +1,38 @@
+from pathlib import Path
+import os
+import time
+cwd=Path.cwd()
+print("current working directory: ",cwd)
+home=Path.home()
+print("Home directory: ",home)
+relative_path=Path("example_folder/example.txt")
+absolute_path=relative_path.resolve()
+print("relative: ", relative_path)
+print("absolute:",absolute_path)
+print("parts:", absolute_path.parts)
+print("parent:", absolute_path.parent)
+print("parents:", list(absolute_path.parents))
+print("name:", absolute_path.name)
+print("stem:", absolute_path.stem)
+print("suffix:", absolute_path.suffix)
+print("suffixes:", absolute_path.suffixes)
+project_dir=cwd/"pathlib_demo"
+file_path=project_dir/"data"/"info.txt"
+print("composed path:", file_path)
+print("exists?", file_path.exists())
+print("is file?", file_path.is_file())
+print("is dir?", file_path.is_dir())
+print("is absolute?", file_path.is_absolute())
+(project_dir/"data").mkdir(parents=True, exist_ok=True)
+file_path.write_text("Hello from pathlib\n", encoding="utf-8")
+with file_path.open("a", encoding="utf-8") as f:
+    f.write("Appending a second line.\n")
+content=file_path.read_text(encoding="utf-8")
+print("file_content:", content)
+with file_path.open("r", encoding="utf-8") as f:
+    print(f.read())
+print("iterdir:")
+for item in project_dir.iterdir():
+    print("-", item, "|file?", item.is_file())
+    
+    
