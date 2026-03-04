@@ -1,0 +1,7 @@
+from pathlib import Path
+import stat as st
+p=Path(__file__)
+pm=p.stat().st_mode
+print(st.S_ISREG(pm))
+print(st.S_ISDIR(pm))
+input()
