@@ -38,7 +38,7 @@ for txt in project_dir.rglob("*.txt"):
     print(" -", txt)
 stat=file_path.stat()
 print("size:", stat.st_size, "bytes")
-print("last modified:", time.ctime(st.st_mtime))
+print("last modified:", time.ctime(stat.st_mtime))
 
 
     
