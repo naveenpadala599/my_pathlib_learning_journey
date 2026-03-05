@@ -34,5 +34,12 @@ with file_path.open("r", encoding="utf-8") as f:
 print("iterdir:")
 for item in project_dir.iterdir():
     print("-", item, "|file?", item.is_file())
+for txt in project_dir.rglob("*.txt"):
+    print(" -", txt)
+stat=file_path.stat()
+print("size:", stat.st_size, "bytes")
+print("last modified:", time.ctime(st.st_mtime))
+
+
     
     
