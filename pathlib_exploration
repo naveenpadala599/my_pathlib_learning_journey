@@ -42,6 +42,8 @@ print("last modified:", time.ctime(stat.st_mtime))
 renamed=file_path.with_name("renamed_info.txt")
 file_path.rename(renamed)
 print("renamed_to: ", renamed.name)
+changed_ext=renamed.with_suffix(".md")
+renamed.replace(changed_ext)
 
 
     
