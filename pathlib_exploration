@@ -39,6 +39,9 @@ for txt in project_dir.rglob("*.txt"):
 stat=file_path.stat()
 print("size:", stat.st_size, "bytes")
 print("last modified:", time.ctime(stat.st_mtime))
+renamed=file_path.with_name("renamed_info.txt")
+file_path.rename(renamed)
+print("renamed_to: ", renamed.name)
 
 
     
