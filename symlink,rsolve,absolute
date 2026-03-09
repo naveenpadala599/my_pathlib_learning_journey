@@ -10,9 +10,9 @@ print(real_file)
 print("\nsymlink path")
 print(symlink)
 print("\n__using absolute__")
-print(symlink.absolute())
-print("\n__using resolve__")
-print(symlink.resolve())
+print(symlink.absolute()) # gives absolute path of the symlink itself
+print("\n__using resolve__") 
+print(symlink.resolve()) #gives absolute path of the target file represted by the symlink
 
 print("\n__check if it is symlink__")
 print(symlink.is_symlink())
