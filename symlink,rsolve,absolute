@@ -1,0 +1,18 @@
+from pathlib import Path
+real_file=Path("real_file.txt")
+real_file.write_text("Hello! from real file")
+symlink=Path("shortcut.txt")
+if symlink.exists() or symlink.is_symlink():
+    symlink.unlink()
+symlink.symlink_to(real_file)
+print("real file path")
+print(real_file)
+print("\nsymlink path")
+print(symlink)
+print("\n__using absolute__")
+print(symlink.absolute())
+print("\n__using resolve__")
+print(symlink.resolve())
+
+print("\n__check if it is symlink__")
+print(symlink.is_symlink())
