@@ -1,0 +1,10 @@
+from pathlib import Path
+file1=Path("Example.txt")
+file2=Path("./Example.txt")
+print("file1:", file1)
+print("file2:", file2)
+print("are paths exactly equal?:", file1==file2)
+if file1.exists() and file2.exists():
+    print("do they refer to the same file?:",file1.samefile(file2))
+else:
+    print("create example.txt to test .samefile()")
