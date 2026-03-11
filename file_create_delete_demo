@@ -1,0 +1,13 @@
+from pathlib import Path
+desktop=Path.home()/"desktop"
+folder=desktop/"sample_folder"
+file=folder/"sample_file.txt"
+folder.mkdir(exist_ok=True)
+file.touch()
+print(folder.exists())
+print(file.exists())
+input("press enter after checking the filesystem")
+file.unlink()
+print(file.exists())
+folder.rmdir()
+print(folder.exists())
